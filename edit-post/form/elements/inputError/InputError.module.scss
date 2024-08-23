@@ -1,0 +1,6 @@
+@use "@/styles/variables";
+
+.error {
+  color: variables.$alert-500;
+  font-size: 14px;
+}

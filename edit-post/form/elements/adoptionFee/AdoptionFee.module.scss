@@ -1,0 +1,39 @@
+@use "@/styles/variables";
+
+.row {
+  gap: 16px;
+  display: flex;
+}
+
+.priceButton {
+  width: 48px;
+  height: 48px;
+}
+
+.input {
+  ::-webkit-outer-spin-button,
+  ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.price div {
+  color: variables.$primary;
+}
+
+@media (max-width: variables.$md) {
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .price {
+    order: 1;
+    margin-bottom: 16px;
+  }
+
+  .priceButton {
+    order: 2;
+    width: calc(50% - 8px);
+  }
+}

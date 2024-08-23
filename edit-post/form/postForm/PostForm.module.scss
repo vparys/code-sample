@@ -1,0 +1,61 @@
+@use "@/styles/variables";
+
+.wrapper {
+  max-width: 896px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hl {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  color: variables.$grey-700;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: variables.$grey-700;
+}
+
+.submitButton {
+  &[disabled] {
+    background-color: variables.$grey-300;
+    border: 1px solid variables.$grey-300;
+  }
+}
+
+.closeButton {
+  height: 60px;
+  filter: grayscale(100%);
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 2;
+  box-shadow: 10px 0 24px 0 rgba(0, 0, 0, 0.12);
+  margin: 0 -24px;
+  width: calc(100% + 48px);
+  padding: 16px 24px;
+
+  div {
+    height: 30px;
+    width: 30px;
+    border: 0 none;
+    background-color: white;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: variables.$md) {
+  .stickyFooter {
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    padding: 16px 24px;
+    box-shadow: 10px 0 24px 0 rgba(0, 0, 0, 0.12);
+    margin: 0 -24px;
+    z-index: 50;
+  }
+}

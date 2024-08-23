@@ -1,0 +1,30 @@
+@use "@/styles/variables";
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: variables.$grey-700;
+}
+
+.choiceButton {
+  width: 100%;
+  padding: 8px 12px;
+  height: auto;
+}
+
+@media (min-width: variables.$md) {
+  .choiceButton {
+    padding: 8px 16px;
+  }
+}
+
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}

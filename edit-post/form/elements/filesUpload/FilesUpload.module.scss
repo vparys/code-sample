@@ -1,0 +1,88 @@
+@use "@/styles/variables";
+
+.filesUpload {
+  padding: 28px;
+  border-radius: 4px;
+  background-color: variables.$primary-100;
+
+  label {
+    padding: 12px;
+    border-radius: 4px;
+    background-color: variables.$primary;
+    cursor: pointer;
+  }
+
+  input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+.uploadedFile {
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  height: 104px;
+  width: 104px;
+  cursor: grab;
+
+  img {
+    object-fit: cover;
+  }
+
+  &:hover {
+    .deleteButton {
+      display: block;
+    }
+
+    .fileName {
+      display: block;
+    }
+
+    .mainPicName {
+      display: none;
+    }
+
+    outline: 1px solid variables.$primary;
+    outline-offset: -1px;
+  }
+}
+
+.deleteButton {
+  border-radius: 4px;
+  padding: 8px;
+  background-color: variables.$primary;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  display: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: variables.$primary-hover;
+  }
+}
+
+.fileName {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.mainPicName {
+  @extend .fileName;
+  display: block;
+}

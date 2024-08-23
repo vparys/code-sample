@@ -1,0 +1,8 @@
+@use "@/styles/variables";
+
+.line {
+  height: 1px;
+  color: variables.$grey-200;
+  opacity: 1;
+  margin: 32px 0;
+}

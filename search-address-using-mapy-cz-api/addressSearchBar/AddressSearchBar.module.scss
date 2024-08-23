@@ -1,0 +1,30 @@
+@use "@/styles/variables";
+
+.hasError {
+  border: 1px solid variables.$alert-500;
+}
+
+.container {
+  width: 100%;
+}
+
+.errorIcon {
+  color: variables.$alert-500;
+
+  path {
+    fill: variables.$alert-500;
+  }
+}
+
+.error {
+  margin-top: 8px;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133.333%;
+  letter-spacing: 0.4px;
+  color: variables.$alert-500;
+}
